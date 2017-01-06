@@ -12,6 +12,12 @@
         font-family: 'Playfair Display', serif;
         font-weight: normal;
       }
+      h2::before {
+        content: "Vraag " attr(data-index) ": "; /* Display the counter */
+      }
+      img {
+          max-width: 100%;
+      }
       .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
     </style>
   </head>
@@ -31,20 +37,274 @@ class: center, middle
 3. De vragen kloppen, allemaal.
 4. Een antwoord beter dan de juri had kunnen bedenken, kan bonus-punten opleveren.
 
+5. 3 rondes
+6. 10 minuten per ronde
+7. 10 minuten pauzes om even op te scheppen over hoe goed je gaat. (en voor de juri om scores te tellen)
+
 ---
 
-# Vraag 1
+class: center, middle
+
+# 1ste Ronde
+
+---
 
 ## Hoe vaak is Antoon Reurings tijdens zijn slalom cariere over de kop geslagen?
 
 ???
+
 Nooit, dit gebeurde wel meerdere malen in zijn Rally cariere...
+
+---
+
+## welk disney-character vindt het niet erg dat hij altijd een donkere wolk boven zijn hoofd heeft?
+
+???
+
+---
+
+## welk continent heeft niemand in deze familie ooit voet op gezet?
+
+???
+
+---
+
+## wat is het merk van de truck van FransTrans
+
+???
+
+---
+
+## van welke band is het volgende muziek fragment? (Richards carnaval band)
+
+???
+
+---
+
+## welk snoepgoed, vooral bekend van Sinterklaas, wordt ook echt van noten gemaakt?
+
+???
+
+---
+
+## welk paardenras, met uitsterven bedreigt, werd door Nederlanders een nieuw leven ingeroepen?
+
+???
+
+---
+
+## Hoeveel gouden medailles heeft Anky van Grunsven weten te behalen? 3
+
+???
+
+---
+
+## hoeveel inhaalmanouvres haalde Max Verstappen uit tijdens zijn nu al legendarische race in ......? 16de plek
+
+???
+
+---
+
+## hoe heet de sporter uit de ronde venen welke goud haalde op de olympische spelen? nicolien Sauerbrei
+
+---
+
+class: center, middle
+
+# 2de Ronde
+
+---
+
+## noem minimaal 1 naam van een Nederlandse oprichter van cobra.
+
+???
+
+Karel Appel / Constant Corneille
+
+---
+
+## Wie heeft Amsterdam CS ontworpen?
+
+???
+
+Pierre Cuypers
+
+---
+
+## Wie heeft de kroningsjurk van Maxima ontworpen?
+
+???
+
+Jan Taminiau
+
+---
+
+## Welke Reurings is ooit gevangene geweest?
+
+(Denk voor je antwoord even na of je er zeker van bent dat je geen vertrouwelijke informatie
+vrijgeeft, wij hebben iemand in gedachte die er geen moeite mee zou hebben als we dit vertellen)
+
+???
+
+Opa Reurings tijdens the tweede wereld-oorlog
+
+---
+
+## Wie hebben dit liedje gezongen?
+
+???
+
+Kinderen voor Kinderen (niets is koeler dan kerstmis)
+
+---
+
+## Wie is er op 5 december jarig?
+
+???
+
+Sinterklaas
+
+---
+
+## Hoeveel old-timers hebben de mensen in deze ruimte in totaal?
+
+(plus-minus 1 wordt goedgekeurd)
+
+???
+
+teveel?
+
+---
+
+## Wat is de maximale lengte van Nederlands transport per weg?
+
+???
+
+25,25 meter (LZV)
+
+---
+
+## Welke bekende Nederlander is vooral bekend om de uitspraak, "da's logisch"?
+
+???
+
+Johan Cruijff
+
+---
+
+## Welke Nederlander wist een buitenlands team voor het eerst in de wk finale te krijgen?
+
+???
+
+Guus Hiddink
+
+---
+
+class: center, middle
+
+# 3de Ronde
+
+---
+
+## welke film uit 1998? Werd geviert op 21 oktober 2015?
+
+???
+
+Back to the Future, dat was de dag 'in de toekomst' waar Marty mcFly aankwam aan het einde
+van de eerste film.
+
+---
+
+## Wat is de meest bekende pokemon die je kunt vangen in pokemon go?
+
+???
+
+Pikachu
+
+---
+
+## Hoeveel "vingers" houd ik op?
+
+???
+
+3 Wijs-vinger, middel-vinger en ring-vinger
+
+---
+
+## Welk nummer zingt K3 hier?
+
+???
+
+---
+
+## Welke hond loopt graag rond met een goede neut?
+
+???
+
+Sint Bernard
+
+---
+
+## Noem minstens 3 namen van restaurants die in oma's cafeteria hebben gezeten?
+
+???
+
+Liefkenshoek
+Le Virage
+Brasserie Jetties
+
+---
+
+## Met wat loop je op lucht?
+
+???
+
+Nike Air Max
+
+---
+
+## Van wie is dit een merk-beeld?
+
+![Zwaan](zwaan.jpg)
+
+???
+
+KLM
+
+---
+
+##  Zet de “hypes” in de juiste chronologische volgorde van oud naar nieuw.
+
+- A. MSN – Tamagotchi – Furby – Flippo’s
+- B. Flippo’s – Tamagotchi – Furby - MSN
+- C. Tamagotchi – Furby – Flippo’s – MSN
+- D. Furby – MSN – Flippo’s – Tamagotchi
+
+???
+
+B 1995, 1997, 1998, 1999
+
+---
+
+## Welk logo maakt dit plaatje deel van?
+
+![vraag 30](vraag30.png)
+
+???
+
+Starbucks
 
     </textarea>
     <script src="./remark-latest.min.js">
     </script>
     <script>
       var slideshow = remark.create();
+      (function (questions) {
+          for (var i = 0; i < questions.length; ++i) {
+              var q = questions[i];
+              q.setAttribute('data-index', i + 1);
+          }
+      }(document.querySelectorAll('h2')));
     </script>
   </body>
 </html>
